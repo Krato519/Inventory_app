@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.inventory.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_options"
+            app:destination="@id/options" />
+    </fragment>
+    <fragment
+        android:id="@+id/options"
+        android:name="com.example.inventory.Options"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_options_to_register_tool"
+            app:destination="@id/register_tool" />
+        <action
+            android:id="@+id/action_options_to_inventory"
+            app:destination="@id/inventory" />
+        <action
+            android:id="@+id/action_options_to_transaction_tool"
+            app:destination="@id/transaction_tool" />
+        <action
+            android:id="@+id/action_options_to_current_loans"
+            app:destination="@id/current_loans" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_tool"
+        android:name="com.example.inventory.Register_tool"
+        android:label="fragment_register_tool"
+        tools:layout="@layout/fragment_register_tool" />
+    <fragment
+        android:id="@+id/inventory"
+        android:name="com.example.inventory.Inventory"
+        android:label="fragment_inventory"
+        tools:layout="@layout/fragment_inventory" />
+    <fragment
+        android:id="@+id/transaction_tool"
+        android:name="com.example.inventory.Transaction_tool"
+        android:label="fragment_transaction_tool"
+        tools:layout="@layout/fragment_transaction_tool" />
+    <fragment
+        android:id="@+id/current_loans"
+        android:name="com.example.inventory.Current_loans"
+        android:label="fragment_current_loans"
+        tools:layout="@layout/fragment_current_loans" />
+</navigation>
