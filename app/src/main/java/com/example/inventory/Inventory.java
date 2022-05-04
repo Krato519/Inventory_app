@@ -2,11 +2,13 @@ package com.example.inventory;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,9 @@ public class Inventory extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View view;
+    private TextView textArea;
 
     public Inventory() {
         // Required empty public constructor
@@ -59,6 +64,22 @@ public class Inventory extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inventory, container, false);
+        view = inflater.inflate(R.layout.fragment_inventory, container, false);
+        return view;
+    }
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+        //
+        initializeView();
+    }//end onViewCreated
+
+    private void initializeView() {
+        String toolsText = "";
+        textArea = view.findViewById(R.id.textView5);
+        Model.tools = Model.myDatabase.selectAll(Model.activity);
+        toolsText = Model.showToolList();
+        textArea.setText(toolsText);
     }
 }

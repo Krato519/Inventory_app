@@ -99,7 +99,7 @@ public class Register_tool extends Fragment {
             @Override
             public void onClick(View view) {
                 Tool tool;
-                String test;
+                //String test;
                 // test = toolNameText.getText().toString() + " / " +  typeText.getText().toString() + " / " + brandText.getText().toString() + " / " + modelText.getText().toString() + " / " + status;
                 //System.out.println(test);
                 tool = new Tool(toolNameText.getText().toString(), typeText.getText().toString(),
@@ -108,11 +108,8 @@ public class Register_tool extends Fragment {
 
                 Model.myDatabase.addNewTool(Model.activity, tool);
 
-                //*********************************************************
-                /*Código que está fallando.
-                Model.tools = Model.myDatabase.selectAll(Model.activity);
-                Model.showToolList();
-                ************************************************************/
+                //Model.tools = Model.myDatabase.selectAll(Model.activity);
+                //Model.showToolList();
 
                 toolNameText.setText("");
                 brandText.setText("");

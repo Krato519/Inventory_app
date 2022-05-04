@@ -87,8 +87,7 @@ public class MyToolsDataBase {
         table = DataBaseSchema.TABLE_NAME;
         String[] columns =
                 {
-                        //BaseColumns._ID,
-                        DataBaseSchema._ID,
+                        BaseColumns._ID,
                         DataBaseSchema.NAME,
                         DataBaseSchema.TYPE,
                         DataBaseSchema.BRAND,

@@ -17,6 +17,7 @@
             android:text="INVENTARIO"
             android:textAlignment="center"
             android:textSize="34sp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,8 +26,9 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="301dp"
-            android:layout_height="504dp"
+            android:layout_width="303dp"
+            android:layout_height="453dp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

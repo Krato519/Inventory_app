@@ -13,15 +13,20 @@ public class Model {
         activity = anActivity;
     }
 
-    public static void showToolList(){
+    public static String showToolList(){
         int i;
+        String toolList = "";
         System.out.println("*********TOOLS*********");
         i=0;
         while(i < Model.tools.size()){
             System.out.println(Model.tools.get(i));
+            toolList = toolList + Model.tools.get(i).getName() + " / " + Model.tools.get(i).getType() + " / "
+            + Model.tools.get(i).getBrand() + " / " + Model.tools.get(i).getModel() + " / " + Model.tools.get(i).getOut()
+                    + "\n -------------------------------------------\n";
             i = i + 1;
         }
         System.out.println("**********************");
+        return toolList;
     }
 
 }

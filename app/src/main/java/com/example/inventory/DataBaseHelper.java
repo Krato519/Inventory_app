@@ -11,7 +11,7 @@ public class DataBaseHelper extends SQLiteOpenHelper{
 
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + DataBaseSchema.TABLE_NAME + " (" +
-            DataBaseSchema._ID + "INTEGER PRIMARY KEY," +
+            DataBaseSchema._ID + " INTEGER PRIMARY KEY," +
             DataBaseSchema.NAME + " TEXT," +
             DataBaseSchema.TYPE + " TEXT," +
             DataBaseSchema.BRAND + " TEXT," +
