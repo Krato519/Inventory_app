@@ -71,6 +71,7 @@ public class Options extends Fragment {
         botonInventario = view.findViewById(R.id.tools_button);
         botonTransaccion = view.findViewById(R.id.button_transaction);
         botonPrestamos = view.findViewById(R.id.loansButton);
+
         botonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

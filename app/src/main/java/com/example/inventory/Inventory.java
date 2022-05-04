@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +79,7 @@ public class Inventory extends Fragment {
     private void initializeView() {
         String toolsText = "";
         textArea = view.findViewById(R.id.textView5);
+        textArea.setMovementMethod(new ScrollingMovementMethod());
         Model.tools = Model.myDatabase.selectAll(Model.activity);
         toolsText = Model.showToolList();
         textArea.setText(toolsText);

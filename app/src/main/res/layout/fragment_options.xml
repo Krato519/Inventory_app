@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/naranja"
     tools:context=".Options">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,45 +14,61 @@
 
         <Button
             android:id="@+id/tools_button"
-            android:layout_width="160dp"
-            android:layout_height="55dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
             android:text="HERRAMIENTAS"
-            app:layout_constraintBottom_toTopOf="@+id/button_transaction"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/register_button"
-            app:layout_constraintVertical_bias="0.49" />
+            app:layout_constraintVertical_bias="0.09" />
 
         <Button
             android:id="@+id/register_button"
-            android:layout_width="160dp"
-            android:layout_height="55dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
             android:text="REGISTRAR"
-            android:textSize="16sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25" />
+            app:layout_constraintVertical_bias="0.245" />
 
         <Button
             android:id="@+id/button_transaction"
-            android:layout_width="160dp"
-            android:layout_height="55dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
             android:text="MOVIMIENTO"
-            android:textSize="16sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.53" />
+            app:layout_constraintTop_toBottomOf="@+id/tools_button"
+            app:layout_constraintVertical_bias="0.119" />
 
         <Button
             android:id="@+id/loansButton"
-            android:layout_width="160dp"
-            android:layout_height="55dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
             android:text="PRESTAMOS"
-            android:textSize="16sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

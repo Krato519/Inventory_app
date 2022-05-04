@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/naranja"
     tools:context=".Register_tool">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,6 +26,7 @@
                 android:id="@+id/ToolNameText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:hint="Nombre" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +83,12 @@
 
         <Button
             android:id="@+id/button_register_tool"
-            android:layout_width="140dp"
-            android:layout_height="57dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:textSize="22sp"
             android:text="Registrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -98,22 +104,32 @@
             android:text="Registro de herramieta"
             android:textAlignment="center"
             android:textAllCaps="true"
+            android:textColor="#000000"
             android:textSize="24sp"
+            android:textStyle="bold"
+
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.110000014" />
+            app:layout_constraintVertical_bias="0.108" />
 
         <Button
             android:id="@+id/button_delete"
-            android:layout_width="139dp"
-            android:layout_height="55dp"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_button"
             android:text="Borrar"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.86" />
+            app:layout_constraintTop_toBottomOf="@+id/button_register_tool"
+            app:layout_constraintVertical_bias="0.191" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

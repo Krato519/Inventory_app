@@ -10,18 +10,6 @@ import java.util.LinkedList;
 
 public class MyToolsDataBase {
 
-    private void showAllMoves(){
-
-    }
-    private void showAllCurrentLoans(){
-
-    }
-    private void toolLoan(Tool tool, String petitioner_name){
-
-    }
-    private void toolDevolution(Tool tool, String name){
-
-    }
     public static void addNewTool(Context context, Tool tool){
         DataBaseHelper dbHelper;
         SQLiteDatabase db;

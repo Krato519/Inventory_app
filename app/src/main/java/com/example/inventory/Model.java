@@ -20,9 +20,14 @@ public class Model {
         i=0;
         while(i < Model.tools.size()){
             System.out.println(Model.tools.get(i));
-            toolList = toolList + Model.tools.get(i).getName() + " / " + Model.tools.get(i).getType() + " / "
-            + Model.tools.get(i).getBrand() + " / " + Model.tools.get(i).getModel() + " / " + Model.tools.get(i).getOut()
-                    + "\n -------------------------------------------\n";
+            toolList = toolList +
+                    "---------------------------------------------------------\n" +
+                       "Nombre: " + Model.tools.get(i).getName() + "\n" +
+                       "Tipo: " + Model.tools.get(i).getType() + "\n" +
+                       "Marca: " + Model.tools.get(i).getBrand() + "\n" +
+                       "Modelo: " + Model.tools.get(i).getModel() + "\n" +
+                       "Estado: " + Model.tools.get(i).getOut() +
+                    "\n---------------------------------------------------------\n";
             i = i + 1;
         }
         System.out.println("**********************");

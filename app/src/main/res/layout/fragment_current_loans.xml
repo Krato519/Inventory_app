@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/naranja"
     tools:context=".Current_loans">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,10 @@
             android:layout_height="48dp"
             android:text="PRESTAMOS"
             android:textAlignment="center"
+            android:textColor="#000000"
             android:textSize="34sp"
+            android:textStyle="bold"
+            android:typeface="serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
