@@ -69,7 +69,7 @@ public class Login extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
+        // View elements for login identification (currently disabled for demo purposes).
         view = inflater.inflate(R.layout.fragment_login, container, false);
         botonIngresar = view.findViewById(R.id.Enter_button);
         userTextArea = view.findViewById(R.id.userTextArea);
@@ -77,9 +77,11 @@ public class Login extends Fragment {
         user = userTextArea.getText().toString();
         password = passwordTextArea.getText().toString();
 
+        //Listener assignation for the login button.
         botonIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Transition from login fragment to the options fragment.
                 NavHostFragment.findNavController(Login.this).navigate(R.id.action_login_to_options);
             }
         });

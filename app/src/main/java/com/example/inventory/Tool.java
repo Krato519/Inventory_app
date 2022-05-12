@@ -1,5 +1,6 @@
 package com.example.inventory;
 
+//Defined values for all the tools stored in the main database.
 public class Tool {
     private String name;
     private String type;
@@ -7,6 +8,7 @@ public class Tool {
     private String model;
     private String out;
 
+    //Function for creating a new tool.
     public Tool(String T_name, String T_type, String T_brand, String T_model, String T_Status){
         name = T_name;
         type = T_type;
@@ -14,7 +16,7 @@ public class Tool {
         model = T_model;
         out = T_Status;
     }
-
+    //Functions for retrieving any value from a tool.
     public String getName(){
         return name;
     }
@@ -30,7 +32,7 @@ public class Tool {
     public String getOut(){
         return out;
     }
-
+    //Function for writing down and storing the values from a tool in a string.
     public String toString(){
         String string;
         string = "(" + name + ", " + type + ", " + brand + ", " + model + ", " + out + ").";

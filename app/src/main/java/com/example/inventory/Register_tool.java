@@ -29,12 +29,15 @@ public class Register_tool extends Fragment {
     private String mParam2;
 
     View view;
-
+    //TextInputs for the tool values used for the registration.
     TextInputEditText toolNameText;
     TextInputEditText brandText;
     TextInputEditText typeText;
     TextInputEditText modelText;
+
+    //Register tool button variable.
     Button registarButton;
+    //Default status string.
     String status = "En almacen";
 
     public Register_tool() {
@@ -85,16 +88,18 @@ public class Register_tool extends Fragment {
     }//end onViewCreated
 
     private void initializeView(){
+        //View elements identification.
         toolNameText = (TextInputEditText) view.findViewById(R.id.ToolNameText);
         brandText = (TextInputEditText) view.findViewById(R.id.BrandText);
         typeText = (TextInputEditText) view.findViewById(R.id.TypeText);
         modelText = (TextInputEditText) view.findViewById(R.id.ModelText);
+        registarButton = view.findViewById(R.id.button_register_tool);
         insertToDatabaseButton(view);
     }
 
+    //Function for getting the TextInput values and storing them into the database.
     private void insertToDatabaseButton(View view){
 
-        registarButton = view.findViewById(R.id.button_register_tool);
         registarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,15 +107,16 @@ public class Register_tool extends Fragment {
                 //String test;
                 // test = toolNameText.getText().toString() + " / " +  typeText.getText().toString() + " / " + brandText.getText().toString() + " / " + modelText.getText().toString() + " / " + status;
                 //System.out.println(test);
+                //Creation of a tool based on the text fields.
                 tool = new Tool(toolNameText.getText().toString(), typeText.getText().toString(),
                         brandText.getText().toString(), modelText.getText().toString(), status);
 
-
+                //Insertion of the tool into the database.
                 Model.myDatabase.addNewTool(Model.activity, tool);
 
                 //Model.tools = Model.myDatabase.selectAll(Model.activity);
                 //Model.showToolList();
-
+                //Text inputs clear for new insertion.
                 toolNameText.setText("");
                 brandText.setText("");
                 typeText.setText("");

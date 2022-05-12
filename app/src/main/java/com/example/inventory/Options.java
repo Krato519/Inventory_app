@@ -26,6 +26,7 @@ public class Options extends Fragment {
     private String mParam1;
     private String mParam2;
     private View view;
+    //Button variables for options.
     private Button botonRegistro;
     private Button botonInventario;
     private Button botonTransaccion;
@@ -67,32 +68,42 @@ public class Options extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_options, container, false);
+
+        //Identification of the buttons in the view.
         botonRegistro = view.findViewById(R.id.register_button);
         botonInventario = view.findViewById(R.id.tools_button);
         botonTransaccion = view.findViewById(R.id.button_transaction);
         botonPrestamos = view.findViewById(R.id.loansButton);
 
+        //Register button click listener assignation.
         botonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Navigation from options fragment to register fragment.
                 NavHostFragment.findNavController(Options.this).navigate(R.id.action_options_to_register_tool);
             }
         });
+        //Inventory button click listener assignation.
         botonInventario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Navigation from options fragment to inventory fragment.
                 NavHostFragment.findNavController(Options.this).navigate(R.id.action_options_to_inventory);
             }
         });
+        //Transaction button click listener assignation.
         botonTransaccion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Navigation from options fragment to transaction tool fragment.
                 NavHostFragment.findNavController(Options.this).navigate(R.id.action_options_to_transaction_tool);
             }
         });
+        //Current Loans button click listener assignation.
         botonPrestamos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Navigation from options fragment to current loans fragment.
                 NavHostFragment.findNavController(Options.this).navigate(R.id.action_options_to_current_loans);
             }
         });
